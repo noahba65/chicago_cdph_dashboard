@@ -8,7 +8,7 @@ library(leaflet)
 library(glue)
 library(ggrepel)
 
-# census_api_key("d1bfee664da7c32a69eb4f9d15662927cf801cad", install = TRUE, overwrite = TRUE)
+# census_api_key("YOUR KEY HERE", install = TRUE, overwrite = TRUE)
 
 source("src/params.R")
 
