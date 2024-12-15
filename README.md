@@ -23,5 +23,7 @@ The shapefile for CTA L (Elevated Rail) stops was sourced from the [Chicago Data
 ## Chicago Community Area Boundaries
 Chicago is divided into 77 official Community Areas as established by the University of Chicago in the 1920s. These Community Areas were then used to group by "side" of Chicago to create a broder region shape file. The boundaries used in this project can be found on the [Chicago Data Portal](https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6). 
 
+![CTA Map](figs/cta_map.png)
+
 
 
