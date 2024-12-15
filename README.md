@@ -4,7 +4,7 @@ This project is an interactive dashboard using American Community Survey (ACS) d
 
 # Data Sets
 ## ACS Data
-ACS Five Year Survey: Using the `tidycensus` package, the ACS five year survey ending in 2019 is read in. The following variables are selected:
+Using the `tidycensus` package, the ACS five year survey ending in 2019 is read in. The following variables are selected:
 
 | **Variable**               | **ACS Code** | **Description**                                  |
 |----------------------------|--------------|-------------------------------------------------|
@@ -17,5 +17,11 @@ ACS Five Year Survey: Using the `tidycensus` package, the ACS five year survey e
 | `poverty_total_population` | B17001_001   | Total Population for Poverty Estimate: ACS Five-Year Survey (2019). |
 | `median_rent`              | B25064_001   | Median Gross Rent: ACS Five-Year Survey (2019).  |
 
+## CTA Stops
+The shapefile for CTA L (Elevated Rail) stops was sourced from the [Chicago Data Portal](https://data.cityofchicago.org/Transportation/CTA-L-Rail-Lines/xbyr-jnvx/about_data) and downloaded in GeoJSON format. Locally, it is stored in the [data](chicago_dashboard/data) directory and can be imported using the [import.R](chicago_dashboard/src/import.R) script. This file contains point geometries representing each CTA L stop, which are used to identify census tracts located within a half-mile radius of these stops. 
 
-This project look
+## Chicago Community Area Boundaries
+Chicago is divided into 77 official Community Areas as established by the University of Chicago in the 1920s. These Community Areas were then used to group by "side" of Chicago to create a broder region shape file. The boundaries used in this project can be found on the [Chicago Data Portal](https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6). 
+
+
+
