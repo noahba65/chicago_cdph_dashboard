@@ -69,4 +69,14 @@ The final product is an interactive data dashboard that allows users to explore 
 
 - **Rent Trend Visualization**: The dashboard also features a line chart that illustrates how **median rent** changes as distance from CTA train stops increases. This chart visualizes rent trends as users interact with different areas, helping to highlight spatial patterns of rent variations near transit hubs.
 
-By offering these visualizations, the dashboard facilitates a deeper understanding of how proximity to public transportation influences socio-economic factors in Chicago.
+
+## References
+
+- City of Chicago. (2024, July 23). *Boundaries - Community Areas (current)* [Data set]. City of Chicago. https://data.cityofchicago.org/Facilities-Geographic-Boundaries/Boundaries-Community-Areas-current-/cauq-8yn6
+
+- Levy, J. (2024, July 12). *CTA 'L' (Rail) Lines* [Data set]. City of Chicago. https://data.cityofchicago.org/Transportation/CTA-L-Rail-Lines/xbyr-jnvx/about_data
+
+- U.S. Census Bureau. (2019). *American Community Survey 5-year estimates (2019)*. Retrieved from https://www.census.gov/data.html
+
+- Walker, K. (2020). *tidycensus: Load US Census Boundary and Attribute Data from the US Census Bureau's APIs* (R package version 1.0.0). https://CRAN.R-project.org/package=tidycensus
+
