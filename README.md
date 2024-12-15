@@ -27,21 +27,17 @@ While there are no *official* broader regions of Chicago, commonly used regional
 
 ![Map of Chicago Sides](figs/Chicago_community_areas_map.svg)
 
-# Data Cleaning and Standardization
+### Data Cleaning and Standardization  
+After importing all datasets, the following broad cleaning steps were performed in `cleaning.R`:  
 
-After importing all datasets, the following broad cleaning steps were performed in [cleaning.R](chicago_dashboard/src/cleaning.R):
+- **Coordinate Reference System (CRS) Standardization**:  
+  All spatial data were standardized to the **EPSG:3435** coordinate system (NAD83 / Illinois East, ftUS). This projection ensures accuracy when analyzing spatial data within the City of Chicago by minimizing distortion and providing precise local measurements.  
 
-1. **Coordinate Reference System (CRS) Standardization**:  
-   All spatial data were standardized to the EPSG:3435 coordinate system, also known as **NAD83 / Illinois East (ftUS)**. This projection is specifically tailored for the Illinois East region, including Chicago, and is measured in U.S. survey feet.  
-   - **NAD83** stands for the *North American Datum of 1983*, a geodetic reference system widely used for mapping and spatial data across North America.  
-   - The **Illinois East (ftUS)** projection ensures accuracy when working with local data in Chicago, particularly for distances and intersections, as it minimizes distortion within this geographic area.  
+- **Clipping to Chicago Boundaries**:  
+  Both the ACS data and the CTA stops shapefile extend beyond Chicago's official boundaries. Using the **sf** package, all datasets were intersected with the Chicago boundary shapefile to retain only data within the city limits.  
 
-2. **Clipping to Chicago Boundaries**:  
-   Both the ACS (American Community Survey) data and the CTA stops shapefile include data extending beyond Chicago's boundaries. To ensure the analysis focuses solely on the City of Chicago:
-   - The **sf package** was used to intersect all spatial datasets with Chicago's official boundary shapefile.  
-   - This process effectively "clipped" the data, retaining only the portions within Chicago's city limits.
-
-By standardizing the CRS and limiting the spatial scope, the datasets were made consistent, ensuring accurate geographic analysis across all layers.
+- **Constructing the "Chicago Sides" Spatial Object**:  
+  In a separate script, [`chicago_sides.R`](chicago_dashboard/src/sides.R), the unofficial "sides" of Chicago were created by grouping Community Areas into broader regions (e.g., North Side, West Side) using the **sf** package and union operations. This custom spatial object enables regional-level analysis and visualization.  
 
 
 
