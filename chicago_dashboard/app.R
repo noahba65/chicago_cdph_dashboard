@@ -27,6 +27,22 @@ source("src/rent_rings.R")
 ui <- fluidPage(
   # Application title
   titlePanel("Chicago Data Dashboard"),
+  # Add a documentation tab/link
+  fluidRow(
+    column(
+      width = 12,
+      tags$div(
+        style = "text-align: left; margin-top: 10px; margin-bottom: 10px;",
+        tags$a(
+          href = "https://github.com/noahba65/chicago_dashboard/blob/dev/README.md", 
+          target = "_blank", 
+          "Click here to view documentation",
+          style = "font-size: 18px; font-weight: bold; color: #005899; text-decoration: none;"
+        )
+      )
+    )
+  ),
+  
   
   # First row: Select Area and its corresponding map
   fluidRow(
@@ -226,7 +242,7 @@ server <- function(input, output, session) {
       )
   })
 }
-
+# Add a nice tab somehwere on the UI that says "Documentation" linking to this https://github.com/noahba65/chicago_dashboard/blob/dev/README.md
 
 # Run the application
 shinyApp(ui = ui, server = server)
