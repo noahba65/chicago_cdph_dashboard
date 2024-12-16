@@ -34,7 +34,7 @@ ui <- fluidPage(
       tags$div(
         style = "text-align: left; margin-top: 10px; margin-bottom: 10px;",
         tags$a(
-          href = "https://github.com/noahba65/chicago_dashboard/blob/dev/README.md", 
+          href = "https://github.com/noahba65/chicago_dashboard/blob/main/README.md", 
           target = "_blank", 
           "Click here to view documentation",
           style = "font-size: 18px; font-weight: bold; color: #005899; text-decoration: none;"
